@@ -28,6 +28,9 @@ jobs:
       - name: Use PNPM 8.x
         run: corepack prepare pnpm@8 --activate
 
+      - name: Install pnpm globally (fallback)
+        run: npm i -g pnpm@8
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
