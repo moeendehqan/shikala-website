@@ -25,23 +25,25 @@ const Header = () => {
       dir="rtl"
       className="sticky top-0 z-50 border-b bg-background/70 backdrop-blur-xl relative"
     >
-      <div className="pointer-events-none absolute inset-x-0 -top-10 h-24 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 sm:h-20 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
+        <div className="flex items-center justify-between py-2 md:py-3">
           {/* برند */}
-          <Link href="/" className="flex items-center gap-3 flex-row-reverse">
-            <Logo width={30} height={30} className="ring-2 ring-foreground/10" />
-            <span className="text-lg sm:text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-l from-primary to-primary/80">شیکالا</span>
+          <Link href="/" className="flex items-center flex-row-reverse">
+            <Logo
+              className="w-40 sm:w-48 md:w-56 lg:w-64 ring-2 ring-foreground/10"
+              style={{ aspectRatio: "3 / 1" }}
+            />
           </Link>
 
           {/* ناوبری دسکتاپ */}
           <nav className="hidden md:block">
-            <ul className="flex items-center gap-6">
+            <ul className="flex items-center gap-7 md:gap-8">
               {menuItems.map((item) => (
                 <li key={item.link}>
                   <Link
                     href={item.link}
-                    className={`relative text-sm font-medium transition-colors hover:text-primary ${
+                    className={`relative text-sm md:text-base font-medium transition-colors hover:text-primary ${
                       isActive(item.link)
                         ? "text-foreground"
                         : "text-foreground/80"

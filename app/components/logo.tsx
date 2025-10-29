@@ -1,30 +1,43 @@
+import type { CSSProperties } from "react";
+
 type LogoProps = {
   width?: number;
   height?: number;
   className?: string;
   alt?: string;
+  style?: CSSProperties;
 };
 
 export default function Logo({
-  width = 30,
-  height = 30,
+  width,
+  height,
   className,
   alt = "لوگوی شیکالا",
+  style,
 }: LogoProps) {
   return (
-    <picture>
-      {/* فرمت برداری برای مرورگرهای پشتیبان */}
-      <source srcSet="/logo.svg" type="image/svg+xml" />
-      {/* جایگزین PNG برای مرورگرهای بدون پشتیبانی SVG */}
-      <img
-        src="/logo.png"
-        alt={alt}
-        width={width}
-        height={height}
-        className={className}
-        loading="eager"
-        decoding="async"
-      />
-    </picture>
+    // فقط SVG: با ماسک تصویری و رنگ برند در همین کامپوننت
+    <span
+      role="img"
+      aria-label={alt}
+      title={alt}
+      className={className}
+      style={{
+        display: "inline-block",
+        // اگر width/height داده شود اعمال می‌شود؛ در غیر این صورت کلاس‌های CSS تعیین‌کننده‌اند
+        width: width ?? undefined,
+        height: height ?? undefined,
+        backgroundColor: "var(--primary)",
+        WebkitMaskImage: 'url("/logo.svg")',
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        WebkitMaskSize: "contain",
+        maskImage: 'url("/logo.svg")',
+        maskRepeat: "no-repeat",
+        maskPosition: "center",
+        maskSize: "contain",
+        ...style,
+      }}
+    />
   );
 }
