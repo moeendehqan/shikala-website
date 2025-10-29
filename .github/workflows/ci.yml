@@ -29,11 +29,12 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script_stop: true
           script: |
-            set -e
+            set -euxo pipefail
             BASE_DIR="/var/www/shikala-website"
             REPO="${{ github.repository }}"
             BRANCH="${{ github.ref_name }}"
             TOKEN="${{ secrets.GITHUB_TOKEN }}"
+            FETCH_URL="https://x-access-token:${TOKEN}@github.com/${REPO}.git"
 
             mkdir -p "$BASE_DIR"
             cd "$BASE_DIR"
@@ -41,17 +42,26 @@ jobs:
             # avoid permission issues when running from CI
             git config --global --add safe.directory "$BASE_DIR" || true
 
+            # detect docker compose v2 or fallback to docker-compose
+            if docker compose version >/dev/null 2>&1; then
+              COMPOSE_CMD="docker compose"
+            elif command -v docker-compose >/dev/null 2>&1; then
+              COMPOSE_CMD="docker-compose"
+            else
+              echo "Docker Compose not found"; exit 1
+            fi
+
             if [ -d .git ]; then
               # update existing clone without storing token
-              git fetch --depth=1 "https://x-access-token:${TOKEN}@github.com/${REPO}.git" "$BRANCH"
+              git fetch --depth=1 "$FETCH_URL" "$BRANCH"
               git reset --hard FETCH_HEAD
             else
               # initialize and fetch branch, keep origin without token
               git init
               git remote add origin "https://github.com/${REPO}.git" || true
-              git fetch --depth=1 "https://x-access-token:${TOKEN}@github.com/${REPO}.git" "$BRANCH"
+              git fetch --depth=1 "$FETCH_URL" "$BRANCH"
               git checkout -f -B "$BRANCH" FETCH_HEAD
             fi
 
-            docker compose -f docker-compose.prod.yml up -d --build
+            $COMPOSE_CMD -f docker-compose.prod.yml up -d --build
             docker image prune -f
