@@ -4,12 +4,13 @@
 
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 type FeatureItem = {
   title: string;
   description: string;
   icon?: string;
-  inlineIcon?: JSX.Element;
+  inlineIcon?: ReactNode;
 };
 
 const items: FeatureItem[] = [
