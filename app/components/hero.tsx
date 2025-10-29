@@ -7,7 +7,7 @@ export default function Hero() {
       dir="rtl"
       className="relative overflow-hidden bg-background"
     >
-      <div className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-primary/[0.06] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

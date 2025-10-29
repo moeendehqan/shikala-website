@@ -99,31 +99,31 @@ export default function AboutPage() {
 
           {/* Visual */}
           <div className="relative mx-auto w-full max-w-lg">
-            <div className="rounded-3xl ring-1 ring-foreground/10 bg-background/70 backdrop-blur-xl p-5 shadow-sm">
-              <div className="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-foreground/[0.08] via-transparent to-foreground/[0.08] flex items-center justify-center">
+            <div className="rounded-3xl ring-1 ring-primary/15 bg-background/70 backdrop-blur-xl p-5 shadow-sm">
+              <div className="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-primary/[0.12] via-transparent to-primary/[0.08] flex items-center justify-center">
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-foreground/10 p-4">
+                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-primary/15 p-4">
                     <Image src="/globe.svg" alt="شبکه" width={32} height={32} />
                   </div>
-                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-foreground/10 p-4">
+                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-primary/15 p-4">
                     <Image src="/file.svg" alt="فایل" width={32} height={32} />
                   </div>
-                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-foreground/10 p-4">
+                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-primary/15 p-4">
                     <Image src="/next.svg" alt="نکست" width={32} height={32} />
                   </div>
-                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-foreground/10 p-4">
+                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-primary/15 p-4">
                     <Image src="/window.svg" alt="پنجره" width={32} height={32} />
                   </div>
-                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-foreground/10 p-4">
+                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-primary/15 p-4">
                     <Image src="/vercel.svg" alt="ورسل" width={32} height={32} />
                   </div>
-                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-foreground/10 p-4">
+                  <div className="flex items-center justify-center rounded-xl bg-background/80 ring-1 ring-primary/15 p-4">
                     <Image src="/globe.svg" alt="شبکه" width={32} height={32} />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute -bottom-10 left-1/2 h-48 w-[70%] -translate-x-1/2 rounded-full bg-foreground/[0.06] blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-10 left-1/2 h-48 w-[70%] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl" />
           </div>
         </div>
       </div>

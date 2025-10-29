@@ -65,7 +65,7 @@ export default function Features() {
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
             ویژگی‌های کلیدی شیکالا
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-foreground/70">
+          <p className="mt-3 text-sm sm:text-base text-foreground/80">
             ابزارهای حرفه‌ای برای رشد فروش آنلاین، از انتشار تا تحلیل بازار.
           </p>
         </div>
@@ -74,10 +74,10 @@ export default function Features() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="group rounded-2xl ring-1 ring-foreground/10 bg-background/70 backdrop-blur-sm p-5 transition-all hover:-translate-y-0.5 hover:ring-foreground/20"
+              className="group rounded-2xl ring-1 ring-foreground/10 bg-background/70 backdrop-blur-sm p-5 transition-all hover:-translate-y-0.5 hover:ring-primary/30 hover:shadow-md"
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="size-10 flex items-center justify-center rounded-xl bg-foreground/[0.06] ring-1 ring-foreground/10">
+                <div className="size-10 flex items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/15">
                   {item.icon ? (
                     <Image
                       src={item.icon}
@@ -91,7 +91,7 @@ export default function Features() {
                 </div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
               </div>
-              <p className="text-sm leading-7 text-foreground/70">{item.description}</p>
+              <p className="text-sm leading-7 text-foreground/80">{item.description}</p>
             </div>
           ))}
         </div>

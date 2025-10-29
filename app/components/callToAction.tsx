@@ -1,13 +1,13 @@
 export default function CallToAction() {
   return (
     <section dir="rtl" className="relative bg-background py-16">
-      <div className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-primary/[0.05] to-transparent" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center rounded-2xl ring-1 ring-foreground/10 bg-background/70 backdrop-blur-sm p-8">
+        <div className="text-center rounded-2xl ring-1 ring-primary/15 bg-background/70 backdrop-blur-sm p-8 shadow-sm">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
             همین امروز فروشگاه‌تان را به شیکالا وصل کنید
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-foreground/70">
+          <p className="mt-3 text-sm sm:text-base text-foreground/80">
             با چند کلیک ساده، آگهی‌ها را خودکار منتشر کنید و فروش آنلاین را شروع کنید.
           </p>
 

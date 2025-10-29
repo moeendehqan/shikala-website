@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "./logo";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -29,14 +30,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-3">
           {/* برند */}
           <Link href="/" className="flex items-center gap-3 flex-row-reverse">
-            <Image
-              src="/globe.svg"
-              alt="لوگوی شیکالا"
-              width={30}
-              height={30}
-              priority
-              className="rounded-full ring-2 ring-foreground/10"
-            />
+            <Logo width={30} height={30} className="ring-2 ring-foreground/10" />
             <span className="text-lg sm:text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-l from-primary to-primary/80">شیکالا</span>
           </Link>
 
@@ -51,7 +45,7 @@ const Header = () => {
                       isActive(item.link)
                         ? "text-foreground"
                         : "text-foreground/80"
-                    } after:absolute after:-bottom-2 after:right-0 after:h-[2px] after:w-0 after:bg-foreground after:transition-all hover:after:w-full`}
+                    } after:absolute after:-bottom-2 after:right-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full`}
                   >
                     {item.name}
                   </Link>
@@ -66,7 +60,7 @@ const Header = () => {
               href="https://panel.shikala.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-gradient-to-l from-primary to-primary/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
+              className="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-linear-to-l from-primary to-primary/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
             >
               <Image src="/window.svg" alt="پنل" width={16} height={16} />
               ورود به پنل
