@@ -27,7 +27,18 @@ jobs:
       - name: Use PNPM 8.x
         run: corepack prepare pnpm@8 --activate
 
+      - name: Check pnpm availability
+        id: pnpm_check
+        shell: bash
+        run: |
+          if command -v pnpm >/dev/null 2>&1; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install pnpm globally (fallback)
+        if: steps.pnpm_check.outputs.found != 'true'
         run: npm i -g pnpm@8
 
       - name: Install dependencies
