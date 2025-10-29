@@ -37,7 +37,7 @@ const Header = () => {
               priority
               className="rounded-full ring-2 ring-foreground/10"
             />
-            <span className="text-lg sm:text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-l from-foreground to-foreground/70">شیکالا</span>
+            <span className="text-lg sm:text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-l from-primary to-primary/80">شیکالا</span>
           </Link>
 
           {/* ناوبری دسکتاپ */}
@@ -47,7 +47,7 @@ const Header = () => {
                 <li key={item.link}>
                   <Link
                     href={item.link}
-                    className={`relative text-sm font-medium transition-colors hover:text-foreground ${
+                    className={`relative text-sm font-medium transition-colors hover:text-primary ${
                       isActive(item.link)
                         ? "text-foreground"
                         : "text-foreground/80"
@@ -66,7 +66,7 @@ const Header = () => {
               href="https://panel.shikala.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-gradient-to-l from-foreground to-foreground/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
+              className="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-gradient-to-l from-primary to-primary/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
             >
               <Image src="/window.svg" alt="پنل" width={16} height={16} />
               ورود به پنل
@@ -77,7 +77,7 @@ const Header = () => {
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
               onClick={toggleMenu}
-              className="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-foreground/10"
+              className="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-primary/10"
             >
               {isOpen ? (
                 // آیکون ضربدر

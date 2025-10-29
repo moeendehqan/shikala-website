@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-l from-foreground to-foreground/70">
+              <span className="bg-clip-text text-transparent bg-gradient-to-l from-primary to-primary/80">
                 با شیکالا، فروش آنلاین
               </span>
               <br />
@@ -30,14 +30,14 @@ export default function Hero() {
                 href="https://panel.shikala.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold bg-gradient-to-l from-foreground to-foreground/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold bg-gradient-to-l from-primary to-primary/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
               >
                 <Image src="/window.svg" alt="شروع" width={18} height={18} />
                 شروع رایگان
               </a>
               <Link
                 href="/about"
-                className="inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold border border-foreground/15 text-foreground hover:bg-foreground/10 transition-colors"
+                className="inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold border border-foreground/15 text-foreground hover:bg-primary/10 transition-colors"
               >
                 مشاهده امکانات
               </Link>

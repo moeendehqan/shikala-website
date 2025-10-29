@@ -16,7 +16,7 @@ export default function CallToAction() {
               href="https://panel.shikala.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl px-7 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold bg-foreground text-background ring-1 ring-foreground/10 hover:bg-foreground/90 transition-colors focus:outline-none focus:ring-2 focus:ring-foreground/20"
+              className="inline-flex items-center justify-center rounded-xl px-7 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold bg-primary text-background ring-1 ring-primary/10 hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
             >
               ثبت فروشگاه
             </a>

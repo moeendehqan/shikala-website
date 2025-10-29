@@ -1,6 +1,35 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 
-export default function AboutUs() {
+export const metadata: Metadata = {
+  title: "درباره شیکالا",
+  description:
+    "شیکالا پلتفرمی برای ساده‌سازی فروش آنلاین؛ تمرکز بر سرعت، تجربه کاربری و سئوی عالی.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    type: "website",
+    url: "/about",
+    title: "درباره شیکالا",
+    description:
+      "با شیکالا، فروش آنلاین را سریع‌تر و هوشمندتر تجربه کنید.",
+    images: [
+      {
+        url: "/vercel.svg",
+        width: 1200,
+        height: 630,
+        alt: "شیکالا",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function AboutPage() {
   return (
     <section dir="rtl" className="bg-background py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
