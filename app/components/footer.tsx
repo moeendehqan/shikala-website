@@ -67,7 +67,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-3 relative after:absolute after:-bottom-2 after:right-0 after:h-[2px] after:w-10 after:bg-primary">آدرس و سیاست‌ها</h3>
             <p className="text-sm text-foreground/80">
-              تهران، خیابان مثال، پلاک ۱۲، واحد ۵
+            یزد
             </p>
             <div className="mt-2 text-sm">
               <Link href="/privacy" className="hover:underline hover:text-primary">
@@ -87,7 +87,6 @@ export default function Footer() {
                 <Image src="/next.svg" alt="مجوز کسب‌وکار (نمونه)" width={48} height={48} />
               </div>
             </div>
-            <p className="mt-2 text-xs text-foreground/60">لطفاً با نمادهای رسمی خود جایگزین کنید.</p>
           </div>
         </div>
 

@@ -8,30 +8,34 @@ type Step = {
 
 const steps: Step[] = [
   {
-    title: "ثبت‌نام فروشگاه",
-    description: "ایجاد حساب و ساخت پروفایل فروشگاه در چند دقیقه.",
-    icon: "/window.svg",
+    title: "ثبت‌نام و احراز هویت فروشگاه",
+    description:
+      "با وارد کردن اطلاعات فروشگاه و مدارک رسمی، حساب کاربری خود را بساز و نشان تأیید (Badge) دریافت کن.",
+    icon: "/shield.svg",
   },
   {
-    title: "افزودن موجودی موبایل‌ها",
-    description: "ثبت محصولات، مدیریت موجودی و آپلود گروهی به‌صورت سریع.",
+    title: "افزودن موجودی و مشخصات محصولات",
+    description:
+      "موبایل‌های موجود را به‌صورت تکی یا گروهی ثبت کن. موجودی و قیمت‌ها به‌صورت خودکار همگام‌سازی می‌شوند.",
     icon: "/file.svg",
   },
   {
-    title: "نمایش آگهی در پلتفرم",
-    description: "انتشار خودکار آگهی‌ها در پلتفرم‌های منتخب با یک کلیک.",
+    title: "انتشار خودکار آگهی در کانال‌ها",
+    description:
+      "محصولات ثبت‌شده بلافاصله در وب‌سایت، کانال تلگرام رسمی و از طریق پیامک برای خریداران هدف منتشر می‌شوند.",
     icon: "/globe.svg",
   },
   {
-    title: "دریافت خریدار و مدیریت سفارش‌ها",
-    description: "دریافت سفارش، ارتباط با مشتری و پیگیری ارسال‌ها.",
-    icon: "/next.svg",
+    title: "دریافت سفارش و معامله اعتباری امن",
+    description:
+      "درخواست‌های خریداران را از پنل اختصاصی ببین، معامله را تأیید کن و پس از تحویل کالا، تسویه انجام می‌شود.",
+    icon: "/order.svg",
   },
 ];
 
 export default function HowItWork() {
   return (
-    <section dir="rtl" className="relative bg-background py-16">
+    <section dir="rtl" className="relative isolate z-10 bg-background py-16">
       <div className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
