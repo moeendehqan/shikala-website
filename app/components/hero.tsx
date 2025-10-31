@@ -12,12 +12,10 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight font-sans">
               <span className="bg-clip-text text-transparent bg-gradient-to-l from-primary to-primary/80">
-                با شیکالا، فروش آنلاین
+                راهکار حرفه‌ای برای فروشندگان موبایل
               </span>
-              <br />
-              <span className="text-foreground">ساده، سریع و حرفه‌ای</span>
             </h1>
 
             <p className="text-base sm:text-lg text-foreground/80 leading-8">
@@ -45,15 +43,15 @@ export default function Hero() {
 
             <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
               <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-background/60 border-foreground/10">
-                <Image src="/globe.svg" alt="بازدید" width={16} height={16} />
-                ۴۵۰۰+ فروشنده خوشحال
+                <Image src="/dashboard.svg" alt="بازدید" width={16} height={16} />
+                داشبورد یکپارچه
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-background/60 border-foreground/10">
-                <Image src="/file.svg" alt="فاکتور" width={16} height={16} />
-                فاکتور و پرداخت آنلاین
+                <Image src="/pay.svg" alt="فاکتور" width={16} height={16} />
+                پرداخت آنلاین
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-background/60 border-foreground/10">
-                <Image src="/next.svg" alt="سریع" width={16} height={16} />
+                <Image src="/speed.svg" alt="سریع" width={16} height={16} />
                 سرعت و امنیت بالا
               </span>
             </div>

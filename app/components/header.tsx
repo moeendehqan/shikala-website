@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header
       dir="rtl"
-      className="sticky top-0 z-50 border-b bg-background/70 backdrop-blur-xl relative"
+      className="sticky top-0 z-50 bg-primary text-background relative"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-16 sm:h-20 bg-gradient-to-b from-foreground/[0.06] to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,8 +31,8 @@ const Header = () => {
           {/* برند */}
           <Link href="/" className="flex items-center flex-row-reverse">
             <Logo
-              className="w-40 sm:w-48 md:w-56 lg:w-64 ring-2 ring-foreground/10"
-              style={{ aspectRatio: "3 / 1" }}
+              priority
+              className="w-40 sm:w-48 md:w-56 lg:w-64 ring-2 ring-background/20"
             />
           </Link>
 
@@ -43,11 +43,11 @@ const Header = () => {
                 <li key={item.link}>
                   <Link
                     href={item.link}
-                    className={`relative text-sm md:text-base font-medium transition-colors hover:text-primary ${
+                    className={`relative text-sm md:text-base font-medium transition-colors hover:text-background ${
                       isActive(item.link)
-                        ? "text-foreground"
-                        : "text-foreground/80"
-                    } after:absolute after:-bottom-2 after:right-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full`}
+                        ? "text-background"
+                        : "text-background/85"
+                    } after:absolute after:-bottom-2 after:right-0 after:h-[2px] after:w-0 after:bg-background after:transition-all hover:after:w-full`}
                   >
                     {item.name}
                   </Link>
@@ -62,7 +62,7 @@ const Header = () => {
               href="https://panel.shikala.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-linear-to-l from-primary to-primary/80 text-background shadow-sm hover:shadow-md transition-all hover:opacity-95"
+              className="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-background text-foreground shadow-sm hover:bg-background/90 transition-all"
             >
               <Image src="/window.svg" alt="پنل" width={16} height={16} />
               ورود به پنل
@@ -121,14 +121,14 @@ const Header = () => {
           isOpen ? "max-h-[320px]" : "max-h-0"
         }`}
       >
-        <ul className="px-4 py-3 space-y-2 bg-background/80 backdrop-blur-sm">
+        <ul className="px-4 py-3 space-y-2 bg-primary text-background">
           {menuItems.map((item) => (
             <li key={item.link}>
               <Link
                 href={item.link}
                 onClick={closeMenu}
-                className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/10 ${
-                  isActive(item.link) ? "text-foreground" : "text-foreground/80"
+                className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-background/10 ${
+                  isActive(item.link) ? "text-background" : "text-background/85"
                 }`}
               >
                 {item.name}
@@ -141,8 +141,9 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="mt-2 block rounded-lg px-3 py-2 text-sm font-semibold text-background bg-foreground/90 hover:bg-foreground"
+              className="mt-2 flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold bg-background text-foreground hover:bg-background/90"
             >
+              <Image src="/window.svg" alt="پنل" width={16} height={16} />
               ورود به پنل
             </a>
           </li>
