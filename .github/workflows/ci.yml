@@ -27,8 +27,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          timeout: 1800s
-          command_timeout: 1800s
+          timeout: 2800s
+          command_timeout: 2800s
           script_stop: true
           script: |
             set -euxo pipefail
