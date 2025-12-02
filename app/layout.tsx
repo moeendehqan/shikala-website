@@ -75,6 +75,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa">
+      <head>
+        <meta name="enamad" content="77616406" />
+      </head>
       <body
         className={`${vazirmatn.variable} ${geistMono.variable} antialiased`}
       >
