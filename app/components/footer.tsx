@@ -81,9 +81,10 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-3 relative after:absolute after:-bottom-2 after:right-0 after:h-[2px] after:w-10 after:bg-primary">نماد اعتماد و مجوزها</h3>
             <div className="flex items-center gap-4">
               <div className="rounded-xl ring-1 ring-primary/15 bg-background/70 p-2">
-                {/* <Image src="/vercel.svg" alt="نماد اعتماد (نمونه)" width={48} height={48} />
-                 */}
-                 <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=683957&Code=R086yzUnB3Oh7vDrfBjQmWxI6KE6LGiA'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=683957&Code=R086yzUnB3Oh7vDrfBjQmWxI6KE6LGiA' alt='' style='cursor:pointer' code='R086yzUnB3Oh7vDrfBjQmWxI6KE6LGiA'></a>
+
+                <a referrerPolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=683957&Code=R086yzUnB3Oh7vDrfBjQmWxI6KE6LGiA">
+                  <img referrerPolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=683957&Code=R086yzUnB3Oh7vDrfBjQmWxI6KE6LGiA" alt="نماد اعتماد الکترونیکی" style={{ cursor: 'pointer' }} />
+                </a>
               </div>
               <div className="rounded-xl ring-1 ring-primary/15 bg-background/70 p-2">
                 <Image src="/next.svg" alt="مجوز کسب‌وکار (نمونه)" width={48} height={48} />
